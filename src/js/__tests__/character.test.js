@@ -1,4 +1,4 @@
-import {Character} from '../Classes';
+import { Character } from '../classes/Character.js';
 
 describe('Character', () => {
   it('should create a character with default values', () => {
