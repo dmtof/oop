@@ -5,12 +5,17 @@ export class Character {
             throw new Error('Некорректное значение имени');
         }
 
+        const allowedTypes = ['Bowman', 'Swordsman', 'Magician', 'Daemon', 'Undead', 'Zombie'];
+        if (!allowedTypes.includes(type)) {
+            throw new Error('Некорректное значение типа');
+        }
+
         this.name = name;
         this.type = type;
         this.health = 100;
         this.level = 1;
-        this.attack = 0; // Значение attack будет установлено в дочерних классах
-        this.defence = 0; // Значение defence будет установлено в дочерних классах
+        this.attack = undefined; // Значение attack будет установлено в дочерних классах
+        this.defence = undefined; // Значение defence будет установлено в дочерних классах
     }
 
     levelUp() {
